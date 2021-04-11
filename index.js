@@ -11,12 +11,12 @@ class LinkedList {
     this.size = 0;
   }
 
-  insertFirstNode(data) {
+  insertNodeAtStart(data) {
     this.head = new Node(data, this.head);
     this.size++;
   }
 
-  insertLastNode(data) {
+  insertNodeAtEnd(data) {
     let node = new Node(data);
     let current;
     if (!this.head) {
@@ -35,7 +35,7 @@ class LinkedList {
     if (index > 0 && index > this.size) {
       return;
     } else if (index === 0) {
-      this.insertFirstNode(data);
+      this.insertNodeAtStart(data);
       return;
     } else {
       let node = new Node(data);
@@ -104,9 +104,9 @@ class LinkedList {
 }
 
 const ll = new LinkedList();
-ll.insertFirstNode(100);
-ll.insertFirstNode(200);
-ll.insertLastNode(300);
+ll.insertNodeAtStart(100);
+ll.insertNodeAtStart(200);
+ll.insertNodeAtEnd(300);
 ll.insertAtIndex(600, 1);
 console.log(ll.printListData());
 ll.deleteAtIndex(2);
