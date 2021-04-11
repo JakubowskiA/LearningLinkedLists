@@ -39,9 +39,8 @@ class LinkedList {
       return;
     } else {
       let node = new Node(data);
-      let current;
+      let current = this.head;;
       let previous;
-      current = this.head;
 
       let count = 0;
 
@@ -104,10 +103,12 @@ class LinkedList {
 }
 
 const ll = new LinkedList();
-ll.insertNodeAtStart(100);
-ll.insertNodeAtStart(200);
-ll.insertNodeAtEnd(300);
-ll.insertAtIndex(600, 1);
+ll.insertNodeAtStart(1);
+ll.insertNodeAtEnd(2);
+ll.insertNodeAtEnd(3);
+ll.insertNodeAtEnd(4);
+ll.insertNodeAtEnd(5);
+ll.insertAtIndex(6, 1);
 console.log(ll.printListData());
 ll.deleteAtIndex(2);
 ll.deleteList();
